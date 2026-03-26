@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin Panel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Zentro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h2>Admin Panel</h2>
-
-<div class="card">
-  <input id="name" placeholder="Product Name">
-  <input id="price" placeholder="Price">
-  <input id="image" placeholder="Image URL">
-  <input id="category" placeholder="Category">
-  <button onclick="addProduct()">Add Product</button>
-</div>
-
-<div id="admin-products" class="grid"></div>
-
-<script src="script.js"></script>
+  <div class="container">
+    <div class="login-container">
+      <div class="login-card">
+        <h1 class="login-title">Zentro</h1>
+        <p class="mb-4 text-muted">Welcome! Please choose your role to continue.</p>
+        
+        <div class="login-btns">
+          <a href="admin.html" class="btn btn-primary">Login as Admin</a>
+          <a href="shop.html" class="btn btn-outline">Login as User</a>
+        </div>
+        
+        <p class="mt-4 text-muted" style="font-size: 0.8rem;">
+          * This is a frontend-only project for college. No real password required.
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
