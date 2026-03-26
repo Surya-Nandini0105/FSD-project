@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Zentro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Zentro Admin</a>
+    <div class="nav-links">
+      <a href="shop.html" class="nav-link">Go to Shop</a>
+      <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="mb-4">Admin Dashboard</h1>
+    
+    <!-- Add Product Form -->
+    <div class="form-card">
+      <h2 class="form-title">Add New Product</h2>
+      <form id="add-product-form">
+        <div class="form-grid">
+          <div class="input-group">
+            <label for="p-name">Product Name</label>
+            <input type="text" id="p-name" placeholder="e.g. Nike Air Max" required>
+          </div>
+          <div class="input-group">
+            <label for="p-price">Price ($)</label>
+            <input type="number" id="p-price" placeholder="e.g. 120" required>
+          </div>
+          <div class="input-group">
+            <label for="p-img">Image URL</label>
+            <input type="url" id="p-img" placeholder="https://example.com/image.jpg" required>
+          </div>
+          <div class="input-group">
+            <label for="p-category">Category</label>
+            <select id="p-category" required>
+              <option value="">Select Category</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Accessories">Accessories</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4" style="width: 100%;">Add Product</button>
+      </form>
+    </div>
+
+    <!-- Product List -->
+    <h2 class="mb-4">All Products</h2>
+    <div id="admin-product-list" class="product-grid">
+      <!-- Products will be injected here by script.js -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
