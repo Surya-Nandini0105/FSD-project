@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Zentro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Zentro</a>
+    <div class="nav-links">
+      <a href="admin.html" class="nav-link">Admin Panel</a>
+      <div class="cart-icon-container" id="cart-icon">
+        <span style="font-size: 1.5rem;">🛒</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+      <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="mb-4">Shop Products</h1>
+    
+    <!-- Shop Controls -->
+    <div class="shop-controls">
+      <input type="text" id="search-input" class="search-bar" placeholder="Search products by name...">
+      <select id="category-filter" class="filter-select">
+        <option value="All">All Categories</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="user-product-list" class="product-grid">
+      <!-- Products will be injected here by script.js -->
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-cart">&times;</span>
+      <h2 class="form-title">Your Shopping Cart</h2>
+      
+      <div id="cart-items" class="cart-list">
+        <!-- Cart items will be injected here -->
+      </div>
+      
+      <div class="mb-4" style="border-top: 2px solid #e2e8f0; padding-top: 1rem;">
+        <h3 style="display: flex; justify-content: space-between;">
+          Total: <span id="cart-total">$0.00</span>
+        </h3>
+      </div>
+      
+      <button id="checkout-btn" class="btn btn-primary" style="width: 100%;">Proceed to Checkout</button>
+      
+      <!-- QR Section (Hidden initially) -->
+      <div id="qr-section" class="qr-section mt-4">
+        <h3 class="mb-4">Scan QR to Pay</h3>
+        <div id="qr-code-container"></div>
+        <p class="mb-4 text-muted">Total Amount: <span id="qr-total">$0.00</span></p>
+        <div style="display: flex; gap: 1rem;">
+          <button id="paid-btn" class="btn btn-primary" style="flex: 1;">I Have Paid</button>
+          <button id="cancel-qr-btn" class="btn btn-outline" style="flex: 1;">Cancel</button>
+        </div>
+      </div>
+      
+      <!-- Feedback Form (Hidden initially) -->
+      <div id="feedback-section" class="mt-4">
+        <h3 class="mb-4">Payment Successful!</h3>
+        <p class="mb-4 text-muted">Please leave your feedback below.</p>
+        <form id="feedback-form">
+          <div class="input-group mb-4">
+            <label for="f-name">Name (Optional)</label>
+            <input type="text" id="f-name" placeholder="Your Name">
+          </div>
+          <div class="input-group mb-4">
+            <label>Rating</label>
+            <div class="rating-stars" id="rating-stars">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <div class="input-group mb-4">
+            <label for="f-comment">Comment</label>
+            <textarea id="f-comment" rows="3" placeholder="Your feedback..." style="width: 100%; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.5rem;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
